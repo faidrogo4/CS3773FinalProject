@@ -9,7 +9,7 @@ public class Customer extends Account{
      *
      * @param accountID
      */
-    Customer(String accountID,String accountPass) {
+    Customer(String accountID,String accountPass) throws IncorrectPasswordException {
         super(accountID,accountPass);
     }
 }

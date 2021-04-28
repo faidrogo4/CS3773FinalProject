@@ -54,12 +54,12 @@ public class Account {
     * */
     public Account( String accountID,  String accountPass) throws IncorrectPasswordException{
         count++;
-        if(accountID.isEmpty()) {
+        if(accountID==null||accountID.isEmpty()) {
             setID("Account#" + count);
         }else {
              setID(accountID);
         }
-        if(accountPass.isEmpty()){
+        if(accountPass==null||accountPass.isEmpty()){
             throw new IncorrectPasswordException(accountPass+" is not an acceptable password");
         }else{
             setPass(accountPass);
@@ -82,6 +82,15 @@ public class Account {
      */
     public boolean logon(String accountID, String accountPass){
         return (chkID(accountID) && chkPass(accountPass));
+    }
+
+    /**
+     * getCount()
+     *
+     * returns count of customers
+     */
+    public int getCount(){
+        return this.count;
     }
 
 }

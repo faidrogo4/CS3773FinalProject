@@ -20,10 +20,11 @@ public class Order {
     }
     /**
      *
-     */
-    public void add(Product newProduct, int count){
+
+    public void add(String newProduct, int count){
         if(products.contains(newProduct)){
             products.get(products.indexOf(newProduct)).add(count);
         }
     }
+     */
 }
