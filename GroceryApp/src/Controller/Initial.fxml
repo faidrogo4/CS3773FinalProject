@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="600.0" minWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InitialController"> 
+   <children>
+      <JFXButton fx:id="LoginButton" layoutX="14.0" layoutY="512.0" prefHeight="54.0" prefWidth="150.0" style="-fx-border-width: 1; -fx-border-radius: 1; -fx-border-style: solid; -fx-border-color: FF8C00;" text="Log In" />
+      <JFXButton fx:id="SignupButton" layoutX="186.0" layoutY="512.0" prefHeight="54.0" prefWidth="150.0" style="-fx-background-color: #FF8C00;" text="Sign Up" />
+      <ImageView fitHeight="181.0" fitWidth="283.0" layoutX="34.0" layoutY="103.0">
+         <image>
+            <Image url="@../../Images/main_page_graphic.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="34.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grocery shopping made easy" textAlignment="CENTER" wrappingWidth="283.0">
+         <font>
+            <Font name="Helvetica Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="332.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get all your favorite groceries delivered right to your doorstep with just a few taps" textAlignment="CENTER" wrappingWidth="283.0">
+         <font>
+            <Font name="Helvetica" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#ff8800" layoutX="104.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;APP NAME&gt;">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
