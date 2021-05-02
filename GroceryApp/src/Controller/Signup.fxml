@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.SignupController">
+   <children>
+      <JFXButton layoutX="23.0" layoutY="44.0" prefHeight="33.0" prefWidth="40.0" textFill="WHITE" />
+      <Text layoutX="36.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!">
+         <font>
+            <Font name="Helvetica Bold" size="26.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="FirstName" layoutX="26.0" layoutY="173.0" maxWidth="298.0" minWidth="269.0" prefHeight="43.0" prefWidth="298.0" promptText="First name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="LastName" layoutX="26.0" layoutY="236.0" maxWidth="298.0" minWidth="269.0" prefHeight="43.0" prefWidth="298.0" promptText="Last name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="EmailField" layoutX="26.0" layoutY="299.0" maxWidth="298.0" minWidth="269.0" prefHeight="43.0" prefWidth="298.0" promptText="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="PasswordField" layoutX="26.0" layoutY="362.0" maxWidth="298.0" minWidth="298.0" prefHeight="43.0" prefWidth="298.0" promptText="Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="26.0" layoutY="44.0">
+         <image>
+            <Image url="@../../Images/back-arrow.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="RegisterButton" layoutX="26.0" layoutY="516.0" prefHeight="56.0" prefWidth="298.0" style="-fx-background-color: #FF8C00;" text="Create account" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="36.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a free account to get started" wrappingWidth="270.8017578125" />
+   </children>
+</AnchorPane>
