@@ -3,30 +3,27 @@ package Controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
 import javafx.fxml.FXML;
 
 public class SignupController {
 
 	@FXML
-	public Button BackButton;
+	public JFXButton BackButton;
 	
 	@FXML
-	public Button RegisterButton;
+	public JFXButton RegisterButton;
 	
 	@FXML
-	public TextField FirstName;
+	public JFXTextField FirstName;
 	
 	@FXML
-	public TextField LastName;
+	public JFXTextField LastName;
 	
 	@FXML
-	public TextField EmailField;
+	public JFXTextField EmailField;
 	
 	@FXML
-	public PasswordField PasswordField;
+	public JFXPasswordField PasswordField;
 	
 	
 	
