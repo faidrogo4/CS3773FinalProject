@@ -10,15 +10,23 @@ public class Account {
      * Private setter function for unique object ID
      */
     private void setID(String ID){
-        this.accountID = ID;
+        if(accountID==null||accountID.isEmpty()) {
+            this.accountID ="Account#" + count;
+        }else {
+            this.accountID=ID;
+        }
     }
     /**
      * setPass(String)
      *
      * private setter function for passphrase
      */
-    private void setPass(String pass){
-        this.accountPass=pass;
+    private void setPass(String pass) throws IncorrectPasswordException{
+        if(accountPass==null||accountPass.isEmpty()){
+            throw new IncorrectPasswordException(accountPass+" is not an acceptable password");
+        }else{
+            this.accountPass=pass;
+        }
     }
 
     /**
@@ -54,16 +62,9 @@ public class Account {
     * */
     public Account( String accountID,  String accountPass) throws IncorrectPasswordException{
         count++;
-        if(accountID==null||accountID.isEmpty()) {
-            setID("Account#" + count);
-        }else {
-             setID(accountID);
-        }
-        if(accountPass==null||accountPass.isEmpty()){
-            throw new IncorrectPasswordException(accountPass+" is not an acceptable password");
-        }else{
-            setPass(accountPass);
-        }
+        setID(accountID);
+        setPass(accountPass);
+
     }
     /**
      * getID()
@@ -91,6 +92,20 @@ public class Account {
      */
     public int getCount(){
         return this.count;
+    }
+
+    /**
+     * updatePass(String, String)
+     *
+     * Will update the pasword to the second string argument if the first string argument matches
+     * the current password. Otherwise it will throw an inccorectPasswordException.
+     */
+    public void updatePass(String current, String newPass) throws IncorrectPasswordException{
+        if(chkPass(current)){
+            setPass(newPass);
+        }else{
+            throw new IncorrectPasswordException("The password you typed was incorrect");
+        }
     }
 
 }

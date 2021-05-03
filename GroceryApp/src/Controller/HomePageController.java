@@ -16,4 +16,6 @@ public class HomePageController {
 	
 	@FXML
 	public JFXButton CartButton;
+
+
 }
