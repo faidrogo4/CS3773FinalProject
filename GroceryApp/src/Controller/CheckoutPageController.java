@@ -1,6 +1,7 @@
 package Controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTreeTableView;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +25,15 @@ public class CheckoutPageController {
 	
 	@FXML
 	public JFXButton CartButton;
+	
+	@FXML
+	public JFXButton CheckoutButton;
+	
+	@FXML
+	public JFXButton clearCartButton;
+	
+	@FXML
+	public JFXTreeTableView tableview;
 
     public void homePress(final ActionEvent actionEvent) throws IOException {
 		Parent homeParent = FXMLLoader.load(getClass().getResource("HomePageView.fxml"));

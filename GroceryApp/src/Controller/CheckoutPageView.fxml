@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.scene.image.*?>
@@ -7,10 +8,9 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.CheckoutPageController">
+<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CheckoutPageController">
    <children>
-      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="DARKORANGE" onAction="#cartPress">
+      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" onAction="#cartPress" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="DARKORANGE">
          <font>
             <Font size="11.0" />
          </font>
@@ -22,19 +22,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="#95a5a6" onAction="#browsePress">
-         <font>
-            <Font size="11.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="33.0">
-               <image>
-                  <Image url="@../../Images/search-icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6" onAction="#orderPress">
+      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" onAction="#orderPress" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -46,7 +34,19 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6" onAction="#homePress">
+      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" onAction="#browsePress" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="#95a5a6">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../../Images/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" onAction="#homePress" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -58,5 +58,28 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <JFXTreeTableView fx:id="tableview" layoutX="38.0" layoutY="83.0" prefHeight="240.0" prefWidth="276.0">
+         <columns>
+            <TreeTableColumn prefWidth="145.0" text="Item" />
+            <TreeTableColumn prefWidth="72.0" text="Price" />
+            <TreeTableColumn prefWidth="58.0" text="Quantity" />
+            <TreeTableColumn minWidth="3.0" prefWidth="25.0" />
+         </columns>
+      </JFXTreeTableView>
+      <Text layoutX="35.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cart">
+         <font>
+            <Font name="Helvetica Bold" size="18.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="CheckoutButton" layoutX="222.0" layoutY="458.0" prefHeight="27.0" prefWidth="86.0" style="-fx-background-color: FF8C00;" text="Check Out" />
+      <HBox alignment="CENTER_RIGHT" layoutX="35.0" layoutY="330.0" prefHeight="27.0" prefWidth="276.0">
+         <children>
+            <JFXButton fx:id="clearCartButton" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #C0C0C0;" text="Clear Cart" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total: " textAlignment="RIGHT" wrappingWidth="143.0087890625" />
+            <Label fx:id="orderTotal" prefHeight="17.0" prefWidth="44.0" text="\$" />
+         </children>
+      </HBox>
+      <JFXTextField layoutX="38.0" layoutY="369.0" maxWidth="267.0" minWidth="165.0" prefHeight="33.0" prefWidth="267.0" promptText="Enter Card Number" />
+      <JFXTextField layoutX="40.0" layoutY="402.0" maxWidth="267.0" minWidth="267.0" prefHeight="33.0" prefWidth="267.0" promptText="Enter Address" />
    </children>
 </AnchorPane>
