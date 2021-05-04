@@ -41,11 +41,11 @@
             <Image url="@../../Images/back-arrow.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="RegisterButton" layoutX="26.0" layoutY="516.0" prefHeight="56.0" prefWidth="298.0" style="-fx-background-color: #FF8C00;" text="Create account" textFill="WHITE">
+      <JFXButton fx:id="RegisterButton" layoutX="26.0" layoutY="516.0" prefHeight="56.0" prefWidth="298.0" style="-fx-background-color: #FF8C00;" text="Create account" textFill="WHITE" onAction="#buttonPress">
          <font>
             <Font size="17.0" />
          </font>
       </JFXButton>
-      <Text layoutX="36.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a free account to get started" wrappingWidth="270.8017578125" />
+      <Text fx:id="InstructionLabel" layoutX="36.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a free account to get started" wrappingWidth="270.8017578125" />
    </children>
 </AnchorPane>

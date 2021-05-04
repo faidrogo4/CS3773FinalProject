@@ -10,31 +10,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.ProductPageController">
    <children>
-      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="#95a5a6">
-         <font>
-            <Font size="11.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="35.0">
-               <image>
-                  <Image url="@../../Images/checkout-icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6">
-         <font>
-            <Font size="11.0" />
-         </font>
-         <graphic>
-            <ImageView fx:id="BrowseButton" fitHeight="30.0" fitWidth="35.0">
-               <image>
-                  <Image url="@../../Images/orders-icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="DARKORANGE">
+      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="DARKORANGE" onAction="#browsePress">
          <font>
             <Font size="11.0" />
          </font>
@@ -46,7 +22,31 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6">
+      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="#95a5a6" onAction="#cartPress">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="35.0">
+               <image>
+                  <Image url="@../../Images/checkout-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6" onAction="#ordersPress">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="35.0">
+               <image>
+                  <Image url="@../../Images/orders-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6" onAction="#homePress">
          <font>
             <Font size="11.0" />
          </font>

@@ -1,5 +1,6 @@
 package Controller;
 
+import application.Main;
 import javafx.fxml.FXML;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +24,9 @@ public class InitialController {
 	public void buttonPress(final javafx.event.ActionEvent actionEvent)throws IOException {
 		JFXButton source = (JFXButton) actionEvent.getSource();
 		if(source.getId().equals("LoginButton")){
+			if(Main.customers.isEmpty()){
+				return;
+			}
 			System.out.println("LoginClick");
 			Parent loginParent =(FXMLLoader.load(getClass().getResource("LoginView.fxml")));
 			Scene loginScene = new Scene(loginParent);

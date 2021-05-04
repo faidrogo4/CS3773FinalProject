@@ -22,8 +22,8 @@ public class Account {
      * private setter function for passphrase
      */
     private void setPass(String pass) throws IncorrectPasswordException{
-        if(accountPass==null||accountPass.isEmpty()){
-            throw new IncorrectPasswordException(accountPass+" is not an acceptable password");
+        if(pass==null||pass.isEmpty()){
+            throw new IncorrectPasswordException(pass+" is not an acceptable password");
         }else{
             this.accountPass=pass;
         }

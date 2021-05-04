@@ -4,6 +4,8 @@ public class Customer extends Account{
 
     private Order current;
     private History hist;
+    private String firstName;
+    private String lastName;
     /**
      * Account()
      * <p>
@@ -11,7 +13,7 @@ public class Customer extends Account{
      *
      * @param accountID
      */
-    Customer(String accountID,String accountPass) throws IncorrectPasswordException {
+    public Customer(String accountID,String accountPass) throws IncorrectPasswordException {
         super(accountID,accountPass);
         current = null;
     }
@@ -40,5 +42,9 @@ public class Customer extends Account{
         }else{
             return createOrder();
         }
+    }
+    public void setName(String first, String last){
+        this.firstName = first;
+        this.lastName = last;
     }
 }
