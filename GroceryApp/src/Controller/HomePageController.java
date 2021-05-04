@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.scene.control.Label;
 import java.io.IOException;
 
 public class HomePageController {
@@ -23,8 +23,14 @@ public class HomePageController {
 	
 	@FXML
 	public JFXButton CartButton;
+	
+	@FXML
+	public JFXButton logoutButton;
 
-
+	@FXML
+	private Label customerFirstNameLabel;
+	
+	
     public void homeButton(final ActionEvent actionEvent) {
 
     }
