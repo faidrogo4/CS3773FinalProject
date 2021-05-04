@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import java.io.IOException;
+import application.Main;
 
 public class HomePageController {
 
@@ -29,7 +30,13 @@ public class HomePageController {
 
 	@FXML
 	private Label customerFirstNameLabel;
-	
+
+	@FXML
+	public void initialize(){
+		customerFirstNameLabel.setText(Main.current.getFirstName());
+	}
+
+
 	
     public void homeButton(final ActionEvent actionEvent) {
 
@@ -54,5 +61,13 @@ public class HomePageController {
 		Scene checkoutScene = new Scene(checkoutParent);
 		Stage nextStage=(Stage) CartButton.getScene().getWindow();
 		nextStage.setScene(checkoutScene);
+	}
+
+	public void logoutPress(final ActionEvent actionEvent) throws IOException{
+    	Main.current = null;
+		Parent initParent = FXMLLoader.load(getClass().getResource("InitialView.fxml"));
+		Scene initScene = new Scene(initParent);
+		Stage nextStage=(Stage) CartButton.getScene().getWindow();
+		nextStage.setScene(initScene);
 	}
 }

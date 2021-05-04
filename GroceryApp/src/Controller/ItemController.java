@@ -27,7 +27,7 @@ public class ItemController {
 		this.item = item;
 		nameLabel.setText(item.GetPName());
 		priceLabel.setText("$" + item.GetPrice());
-		Image image = new Image(getClass().getResourceAsStream(item.GetPImgSrc()));
-		itemImage.setImage(image);
+		//Image image = new Image(getClass().getResourceAsStream(item.GetPImgSrc()));
+		//itemImage.setImage(image);
 	}
 }

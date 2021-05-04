@@ -2,6 +2,7 @@ package application;
 	
 import Controller.*;
 import Model.Customer;
+import Model.Inventory;
 import com.sun.org.apache.xpath.internal.operations.Or;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +18,7 @@ import java.util.List;
 public class Main extends Application {
 	public static List<Customer> customers;
 	public static Customer current;
-
+	public static Inventory inventory;
 	@Override
 	public void start(Stage primaryStage) {
 		try {

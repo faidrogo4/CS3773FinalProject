@@ -31,6 +31,8 @@ public class LoginController {
     public void buttonPress(final ActionEvent actionEvent) throws IOException {
 		Main.current = null;
     	Main.customers.forEach(( c)->{
+    		System.out.println("In list: "+c.getID());
+    		System.out.println("Query: "+EmailField.getText());
 			if(c.logon(EmailField.getText(),PasswordField.getText())){
 				Main.current =c;
 			}

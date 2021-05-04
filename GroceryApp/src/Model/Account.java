@@ -10,7 +10,7 @@ public class Account {
      * Private setter function for unique object ID
      */
     private void setID(String ID){
-        if(accountID==null||accountID.isEmpty()) {
+        if(ID==null||ID.isEmpty()) {
             this.accountID ="Account#" + count;
         }else {
             this.accountID=ID;

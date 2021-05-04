@@ -2,8 +2,8 @@ package Model;
 
 import java.util.ArrayList;
 
-public class Order {
-    private ArrayList<Product> products;
+public class Order extends Inventory {
+
     private Customer customer;
     /**
      *
@@ -15,16 +15,7 @@ public class Order {
      *
      */
     public Order(Customer customer){
-       this.products=new ArrayList<Product>();
+       this.p=new ArrayList<Product>();
        setCust(customer);
     }
-    /**
-     *
-
-    public void add(String newProduct, int count){
-        if(products.contains(newProduct)){
-            products.get(products.indexOf(newProduct)).add(count);
-        }
-    }
-     */
 }

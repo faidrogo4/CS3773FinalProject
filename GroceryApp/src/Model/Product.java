@@ -1,4 +1,5 @@
 package Model;
+import java.util.Comparator;
 
 public class Product {
 
@@ -7,7 +8,22 @@ public class Product {
 		private double price;
 		private int quantity;
 		private double discount;
-		
+		public static Comparator<Product> ComparePrice = new Comparator<Product>() {
+			public int compare(final Product o1, final Product o2) {
+				double price1 = o1.GetPrice();
+				double price2 = o2.GetPrice();
+				int ret = (int) (price1-price2);
+				return ret;
+			}
+		};
+		public static Comparator<Product> CompareName = new Comparator<Product>() {
+			public int compare(final Product o1, final Product o2) {
+				String name1 = o1.GetPName();
+				String name2 = o2.GetPName();
+				int ret = name1.compareTo (name2);
+				return ret;
+			}
+		};
 		
 		public Product(String pName, int pId, double pPrice, int pQuant, double pDiscount) {
 			name = pName;
@@ -56,5 +72,7 @@ public class Product {
 		public int GetQuantity() {
 			return this.quantity;
 		}
-		
+
+
+
 }

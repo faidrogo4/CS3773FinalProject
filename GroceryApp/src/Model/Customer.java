@@ -1,5 +1,7 @@
 package Model;
 
+import javafx.scene.control.Label;
+
 public class Customer extends Account{
 
     private Order current;
@@ -46,5 +48,9 @@ public class Customer extends Account{
     public void setName(String first, String last){
         this.firstName = first;
         this.lastName = last;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
     }
 }

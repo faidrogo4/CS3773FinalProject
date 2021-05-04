@@ -22,18 +22,6 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6" onAction="#orderPress">
-         <font>
-            <Font size="11.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="35.0">
-               <image>
-                  <Image url="@../../Images/orders-icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
       <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="#95a5a6" onAction="#browsePress">
          <font>
             <Font size="11.0" />
@@ -42,6 +30,18 @@
             <ImageView fitHeight="30.0" fitWidth="33.0">
                <image>
                   <Image url="@../../Images/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6" onAction="#orderPress">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="35.0">
+               <image>
+                  <Image url="@../../Images/orders-icon.png" />
                </image>
             </ImageView>
          </graphic>

@@ -54,6 +54,7 @@ public class SignupController {
 		}
 
 		Main.customers.add(newCust);
+		Main.current = newCust;
 		Parent homeParent = FXMLLoader.load(getClass().getResource("HomePageView.fxml"));
 		Scene homeScene = new Scene(homeParent);
 		Stage nextStage=(Stage) RegisterButton.getScene().getWindow();
