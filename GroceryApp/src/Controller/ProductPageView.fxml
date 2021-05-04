@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -7,22 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.ProductPageController">
+<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProductPageController">
    <children>
-      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="DARKORANGE" onAction="#browsePress">
-         <font>
-            <Font size="11.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="33.0">
-               <image>
-                  <Image url="@../../Images/search-icon-selected.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="#95a5a6" onAction="#cartPress">
+      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -34,19 +22,31 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6" onAction="#ordersPress">
+      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="35.0">
+            <ImageView fx:id="BrowseButton" fitHeight="30.0" fitWidth="35.0">
                <image>
                   <Image url="@../../Images/orders-icon.png" />
                </image>
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6" onAction="#homePress">
+      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="DARKORANGE">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../../Images/search-icon-selected.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -58,5 +58,23 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <HBox alignment="CENTER" layoutX="26.0" layoutY="93.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <ScrollPane prefHeight="400.0" prefWidth="300.0">
+               <content>
+                  <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <Text layoutX="35.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Browse Products">
+         <font>
+            <Font name="Helvetica Bold" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
