@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -7,10 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.OrdersPageController">
+<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrdersPageController">
    <children>
-      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="DARKORANGE" onAction="#orderPress">
+      <JFXButton fx:id="OrdersButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="188.0" layoutY="508.0" onAction="#orderPress" prefHeight="59.0" prefWidth="55.0" text="Orders" textAlignment="CENTER" textFill="DARKORANGE">
          <font>
             <Font size="11.0" />
          </font>
@@ -22,7 +22,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6" onAction="#homePress">
+      <JFXButton fx:id="HomeButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="508.0" onAction="#homePress" prefHeight="59.0" prefWidth="55.0" text="Home" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -34,7 +34,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="#95a5a6" onAction="#browsePress">
+      <JFXButton fx:id="BrowseButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="508.0" onAction="#browsePress" prefHeight="59.0" prefWidth="55.0" text="Browse" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -47,7 +47,7 @@
          </graphic>
       </JFXButton>
 
-      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="#95a5a6" onAction="#checkoutPress">
+      <JFXButton fx:id="CartButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="508.0" onAction="#checkoutPress" prefHeight="59.0" prefWidth="55.0" text="Cart" textAlignment="CENTER" textFill="#95a5a6">
          <font>
             <Font size="11.0" />
          </font>
@@ -58,6 +58,30 @@
                </image>
             </ImageView>
          </graphic>
+      </JFXButton>
+      <Text layoutX="35.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Details">
+         <font>
+            <Font name="Helvetica Bold" size="18.0" />
+         </font>
+      </Text>
+      <JFXTreeTableView fx:id="tableview" layoutX="38.0" layoutY="102.0" prefHeight="309.0" prefWidth="272.0">
+         <columns>
+            <TreeTableColumn prefWidth="147.0" text="Item" />
+            <TreeTableColumn minWidth="3.0" prefWidth="66.0" text="Price" />
+            <TreeTableColumn prefWidth="58.0" text="Quantity" />
+         </columns>
+      </JFXTreeTableView>
+      <Label fx:id="orderNumber" layoutX="178.0" layoutY="77.0" text="#" />
+      <Text layoutX="89.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Number:" />
+      <JFXButton fx:id="previousButton" layoutX="35.0" layoutY="72.0" text="&lt;" textFill="#ff8800">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="nextButton" layoutX="284.0" layoutY="72.0" text="&gt;" textFill="#ff8800">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
       </JFXButton>
    </children>
 </AnchorPane>
