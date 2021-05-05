@@ -48,4 +48,11 @@ public class LoginController {
 			nextStage.setScene(homeScene);
 		}
     }
+
+	public void backPress(ActionEvent actionEvent) throws IOException{
+		Parent initialParent = FXMLLoader.load(getClass().getResource("InitialView.fxml"));
+		Scene initalScene = new Scene(initialParent);
+		Stage nextStage= (Stage) BackButton.getScene().getWindow();
+		nextStage.setScene(initalScene);
+	}
 }

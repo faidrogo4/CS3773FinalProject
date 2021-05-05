@@ -39,7 +39,7 @@ public class SignupController {
 	public Text InstructionLabel;
 
 
-	public void buttonPress(final ActionEvent actionEvent) throws IOException, IncorrectPasswordException {
+	public void buttonPress(final ActionEvent actionEvent) throws IOException {
 		Customer newCust = null;
 		try{
 
@@ -61,5 +61,11 @@ public class SignupController {
 		nextStage.setScene(homeScene);
 
 
+	}
+	public void backPress(ActionEvent actionEvent) throws IOException{
+		Parent initialParent = FXMLLoader.load(getClass().getResource("InitialView.fxml"));
+		Scene initalScene = new Scene(initialParent);
+		Stage nextStage= (Stage) BackButton.getScene().getWindow();
+		nextStage.setScene(initalScene);
 	}
 }
