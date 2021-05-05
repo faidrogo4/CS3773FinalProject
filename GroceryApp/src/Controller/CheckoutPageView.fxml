@@ -58,7 +58,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXTreeTableView fx:id="tableview" layoutX="38.0" layoutY="83.0" prefHeight="240.0" prefWidth="276.0">
+      <JFXTreeTableView fx:id="tableview" layoutX="38.0" layoutY="83.0" prefHeight="240.0" prefWidth="276.0" >
          <columns>
             <TreeTableColumn prefWidth="145.0" text="Item" />
             <TreeTableColumn prefWidth="72.0" text="Price" />

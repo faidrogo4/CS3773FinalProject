@@ -8,15 +8,22 @@ public class Customer extends Account{
     private History hist;
     private String firstName;
     private String lastName;
+
     /**
      * Account()
      * <p>
      * Creation of account with password and ID
      *
      * @param accountID
+     * The account ID input at signup view
+     *
+     * @param accountPass
+     * The password input at signup
+     *
      */
     public Customer(String accountID,String accountPass) throws IncorrectPasswordException {
         super(accountID,accountPass);
+        hist= new History();
         current = null;
     }
 
@@ -45,11 +52,40 @@ public class Customer extends Account{
             return createOrder();
         }
     }
+
+    /**
+     * getHist()
+     *
+     * getter for member hist
+     *
+     * @return
+     * History for this customer
+     */
+    public History getHist(){
+        return hist;
+    }
+
+    /**
+     * setName(String, String)
+     *
+     * Sets the name values to be used by the screen when referring to the customer
+     * @param first
+     * The first name of the customer
+     * @param last
+     * The last name of the customer
+     */
     public void setName(String first, String last){
         this.firstName = first;
         this.lastName = last;
     }
 
+    /**
+     * getFirstName()
+     *
+     * returns the first name value for this customer
+     * @return
+     * The first name value
+     */
     public String getFirstName() {
         return this.firstName;
     }
