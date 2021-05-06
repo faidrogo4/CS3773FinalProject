@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Order extends Inventory {
 
     private Customer customer;
+    private int orderNum;
 
     /**
      * setCust(Customer)
@@ -15,6 +16,7 @@ public class Order extends Inventory {
      */
     private void setCust(Customer customer){
         this.customer=customer;
+        orderNum = customer.getOrderNum();
     }
 
     /**
@@ -38,4 +40,14 @@ public class Order extends Inventory {
      * the customer that created this order
      */
     public Customer getCust(){return this.customer;}
+
+    /**
+     * getOrderNum()
+     *
+     * @return
+     * this object's order number
+     */
+    public int getOrderNum(){
+        return orderNum;
+    }
 }

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class CheckoutPageController {
 	public JFXButton clearCartButton;
 	
 	@FXML
-	public JFXTreeTableView tableview;
+	public TableView tableview;
 
     public void homePress(final ActionEvent actionEvent) throws IOException {
 		Parent homeParent = FXMLLoader.load(getClass().getResource("HomePageView.fxml"));

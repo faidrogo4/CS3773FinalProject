@@ -1,4 +1,6 @@
 package Model;
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+
 import java.util.Comparator;
 
 public class Product {
@@ -10,16 +12,16 @@ public class Product {
 		private double discount;
 		public static Comparator<Product> ComparePrice = new Comparator<Product>() {
 			public int compare(final Product o1, final Product o2) {
-				double price1 = o1.GetPrice();
-				double price2 = o2.GetPrice();
+				double price1 = o1.getPrice();
+				double price2 = o2.getPrice();
 				int ret = (int) (price1-price2);
 				return ret;
 			}
 		};
 		public static Comparator<Product> CompareName = new Comparator<Product>() {
 			public int compare(final Product o1, final Product o2) {
-				String name1 = o1.GetPName();
-				String name2 = o2.GetPName();
+				String name1 = o1.getName();
+				String name2 = o2.getName();
 				int ret = name1.compareTo (name2);
 				return ret;
 			}
@@ -33,43 +35,43 @@ public class Product {
 			discount = pDiscount;
 		}
 		
-		public void SetName(String name) {
+		public void setName(String name) {
 			this.name = name;
 		}
 
-		public void SetId(int id) {
+		public void setId(int id) {
 			this.id = id;
 		}
 		
-		public void SetPrice(double price) {
+		public void setPrice(double price) {
 			this.price = price;
 		}
 		
-		public void SetQuantity(int quantity) {
+		public void setQuantity(int quantity) {
 			this.quantity = quantity;
 		}
 		
-		public void SetDiscount(double discount) {
+		public void setDiscount(double discount) {
 			this.discount = discount;
 		}
 		
-		public double GetDiscount() {
+		public double getDiscount() {
 			return this.discount;
 		}
 		
-		public String GetPName() {
+		public String getName() {
 			return this.name;
 		}
 		
-		public int GetId() {
+		public int getId() {
 			return this.id;
 		}
 		
-		public double GetPrice() {
+		public double getPrice() {
 			return this.price;
 		}
 		
-		public int GetQuantity() {
+		public int getQuantity() {
 			return this.quantity;
 		}
 

@@ -1,22 +1,34 @@
 package Model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Observable;
 
 
 public class Inventory {
 	public ArrayList<Product> p;
+
+	private int productCount;
 	
 	public Inventory() {
 		p = new ArrayList<>();
+		productCount = 0;
 	}
 	
 	public void AddProduct(Product prod) {
 		p.add(prod);
+		productCount++;
 	}
-	
+
+	public int getProductCount(){
+		return productCount;
+	}
+
 	public void DeleteProduct(Product prod) {
-		p.remove(prod.GetId());
+		p.remove(prod.getId());
 	}
 
 	/**
@@ -53,7 +65,9 @@ public class Inventory {
 		Collections.reverse(p);
 		return p;
 	}
-	//public void 
+	public ObservableList<Product> getObservable(){
+		return FXCollections.observableList(getListByName(true));
+	}
 	
 	
 }

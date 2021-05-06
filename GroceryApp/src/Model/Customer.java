@@ -5,9 +5,11 @@ import javafx.scene.control.Label;
 public class Customer extends Account{
 
     private Order current;
+    private int orderNum;
     private History hist;
     private String firstName;
     private String lastName;
+
 
     /**
      * Account()
@@ -25,6 +27,7 @@ public class Customer extends Account{
         super(accountID,accountPass);
         hist= new History();
         current = null;
+        orderNum=0;
     }
 
     /**
@@ -34,6 +37,7 @@ public class Customer extends Account{
      */
     private Order createOrder(){
         if(current == null) {
+            orderNum++;
             current = new Order(this);
         }
         return this.current;
@@ -45,7 +49,8 @@ public class Customer extends Account{
      * @return
      * either the current order or creates a new order and returns that
      */
-    private Order getOrder(){
+    public
+    Order getOrder(){
         if(current!=null) {
             return this.current;
         }else{
@@ -88,5 +93,21 @@ public class Customer extends Account{
      */
     public String getFirstName() {
         return this.firstName;
+    }
+
+    public void checkout(){
+        hist.addOrder(current);
+        current = null;
+    }
+
+    /**
+     * getOrderNum()
+     *
+     * getter for order number
+     * @return
+     * the number of times this object has created an order
+     */
+    public int getOrderNum(){
+        return orderNum;
     }
 }

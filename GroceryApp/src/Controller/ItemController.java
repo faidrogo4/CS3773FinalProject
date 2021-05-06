@@ -25,8 +25,8 @@ public class ItemController {
 	
 	public void setData(Product item) {
 		this.item = item;
-		nameLabel.setText(item.GetPName());
-		priceLabel.setText("$" + item.GetPrice());
+		nameLabel.setText(item.getName());
+		priceLabel.setText("$" + item.getPrice());
 		//Image image = new Image(getClass().getResourceAsStream(item.GetPImgSrc()));
 		//itemImage.setImage(image);
 	}
