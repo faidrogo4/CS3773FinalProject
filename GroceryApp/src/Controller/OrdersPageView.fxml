@@ -64,13 +64,6 @@
             <Font name="Helvetica Bold" size="18.0" />
          </font>
       </Text>
-      <JFXTreeTableView fx:id="tableview" layoutX="38.0" layoutY="102.0" prefHeight="309.0" prefWidth="272.0">
-         <columns>
-            <TreeTableColumn prefWidth="147.0" text="Item" />
-            <TreeTableColumn minWidth="3.0" prefWidth="66.0" text="Price" />
-            <TreeTableColumn prefWidth="58.0" text="Quantity" />
-         </columns>
-      </JFXTreeTableView>
       <Label fx:id="orderNumber" layoutX="178.0" layoutY="77.0" text="#" />
       <Text layoutX="89.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Number:" />
       <JFXButton fx:id="previousButton" layoutX="35.0" layoutY="72.0" text="&lt;" textFill="#ff8800">
@@ -83,5 +76,12 @@
             <Font name="Helvetica Bold" size="13.0" />
          </font>
       </JFXButton>
+      <TableView fx:id="tableview" layoutX="35.0" layoutY="118.0" prefHeight="309.0" prefWidth="272.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="137.0" text="Item" />
+          <TableColumn fx:id="quantityColumn" prefWidth="60.0" text="Quantity" />
+            <TableColumn fx:id="priceColumn" prefWidth="74.0" text="Price" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
