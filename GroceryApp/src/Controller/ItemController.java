@@ -42,7 +42,7 @@ public class ItemController {
 	
 	public void addToOrder(Order currOrder, Product item) {
 		this.currOrder = currOrder;		
-		currOrder.AddProduct(item);
+		currOrder.addProduct(item);
 	}
 	
 	@FXML
