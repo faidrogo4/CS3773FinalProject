@@ -3,11 +3,16 @@ package Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import com.jfoenix.controls.JFXButton;
+
+import Model.LoadFxml;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+
 import java.io.IOException;
 import application.Main;
 
@@ -30,10 +35,23 @@ public class HomePageController {
 
 	@FXML
 	private Label customerFirstNameLabel;
+	
+	@FXML
+	private GridPane grid;
 
 	@FXML
 	public void initialize(){
 		customerFirstNameLabel.setText(Main.current.getFirstName());
+		
+		LoadFxml object = new LoadFxml();
+		
+		try {
+			Pane view = object.getPage("Item");
+			grid.add(view, 0, 0, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
 	}
 
 

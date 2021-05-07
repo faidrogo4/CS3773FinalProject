@@ -29,13 +29,19 @@ public class ItemController {
 	
 	private Product item;
 	private Order currOrder;
+	
 	public void initialize(){
 		currOrder = Main.current.getOrder();
 	}
+	
 	public void setData(Product item) {
 		this.item = item;
 		nameLabel.setText(item.getName());
 		priceLabel.setText("$" + item.getPrice());
+		
+		if(item.getQuantity() == 0) {
+			addToCartButton.setVisible(false);
+		}
 		//Image image = new Image(getClass().getResourceAsStream(item.GetPImgSrc()));
 		//itemImage.setImage(image);
 	}
@@ -49,7 +55,7 @@ public class ItemController {
 	void handleAddToCartButton(ActionEvent event) throws IOException {
 		addToOrder(currOrder, item);
 		System.out.println("Item clicked.");
-		System.out.println(item + "added to order");
+		System.out.println(item.getName() + "added to order");
 	}
 	
 }

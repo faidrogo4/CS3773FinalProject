@@ -4,6 +4,7 @@ import application.Main;
 import com.jfoenix.controls.JFXButton;
 
 import Model.LoadFxml;
+import Model.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
@@ -42,7 +44,7 @@ public class ProductPageController implements Initializable{
 	@FXML
 	public GridPane grid;
 
-	
+	public ArrayList<Product> p;
 	/*
 	 * initialize() will load products into grid on ProductPageView load.
 	 * */
@@ -51,34 +53,82 @@ public class ProductPageController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
 		//grid.getRowConstraints().add(new RowConstraints(0));
 		//grid.getColumnConstraints().add(new ColumnConstraints(0));
-		grid.setGridLinesVisible(true);
+		//grid.setGridLinesVisible(true);
 		LoadFxml object = new LoadFxml();
-		Pane view = object.getPage("Item");
+		/*Pane view = object.getPage("asdf");
 		Pane view1 = object.getPage("Item");
 		Pane view2 = object.getPage("Item");
 		Pane view3 = object.getPage("Item");
 		Pane view4 = object.getPage("Item");
 		Pane view5 = object.getPage("Item");
 		Pane view6 = object.getPage("Item");
-		Pane view7 = object.getPage("Item");
+		Pane view7 = object.getPage("Item");*/
 
-		if(view == null
+		try {
+			Pane view = object.getPage("Item");
+			grid.add(view, 0, 0, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			Pane view1 = object.getPage("Item");
+			grid.add(view1, 1, 0, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			Pane view2 = object.getPage("Item");
+			grid.add(view2, 0, 1, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			Pane view3 = object.getPage("Item");
+			grid.add(view3, 1, 1, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			Pane view4 = object.getPage("Item");
+			grid.add(view4, 0, 2, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			Pane view5 = object.getPage("Item");
+			grid.add(view5, 1, 2, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			Pane view6 = object.getPage("Item");
+			grid.add(view6, 0, 3, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}try {
+			Pane view7 = object.getPage("Item");
+			grid.add(view7, 1, 3, 1, 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		/*if(view == null
 		  || view1 == null
 		  || view2 == null
 		  || view3 == null
 		  || view4 == null
 		  || view5 == null
 		  || view6 == null
-		  || view7 == null) { System.out.println("A view is null"); }
+		  || view7 == null) { System.out.println("A view is null"); }*/
 		
-		grid.add(view, 0, 0, 1, 1);
+		/*grid.add(view, 0, 0, 1, 1);
 		grid.add(view1, 1, 0, 1, 1);
 		grid.add(view2, 0, 1, 1, 1);
 		grid.add(view3, 1, 1, 1, 1);
 		grid.add(view4, 0, 2, 1, 1);
 		grid.add(view5, 1, 2, 1, 1);
 		grid.add(view6, 0, 3, 1, 1);
-		grid.add(view7, 1, 3, 1, 1);
+		grid.add(view7, 1, 3, 1, 1);*/
 		
     }
 
@@ -108,21 +158,4 @@ public class ProductPageController implements Initializable{
 		nextStage.setScene(checkoutScene);
 	}
 
-
-	/*
-	@FXML
-	private Button viewProduct;
-	
-	@FXML
-	private Button addProduct;
-	
-	@FXML
-	private Button viewOrder;
-	
-	@FXML 
-	private TextField text;
-	
-	*/
-	
-	
 }

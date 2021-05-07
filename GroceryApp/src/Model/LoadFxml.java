@@ -12,16 +12,16 @@ public class LoadFxml {
 	public Pane getPage(String fileName){	
 		try{
 			
-			URL fileUrl = Main.class.getResource("/controller/" + fileName + ".fxml");
+			URL fileURL = Main.class.getResource("/controller/" + fileName + ".fxml");
 			//System.out.println(fileUrl);
-			if(fileUrl==null){
-				throw new java.io.FileNotFoundException("FXML file can't be found");
+			if(fileURL ==null){
+				throw new java.io.FileNotFoundException("FXML file cannot be found.");
 			}
 			//new FXMLLoader();
-			view = FXMLLoader.load(fileUrl);
+			view = FXMLLoader.load(fileURL);
 		}
 		catch(Exception e){
-			System.out.println("No page "+fileName+" please check FXMLLoader.");
+			System.out.println("No page "+fileName+" please check LoadFxml.");
 		}
 		
 		return view;			
