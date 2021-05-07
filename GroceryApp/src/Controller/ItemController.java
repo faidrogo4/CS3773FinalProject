@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Order;
 import Model.Product;
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -28,7 +29,9 @@ public class ItemController {
 	
 	private Product item;
 	private Order currOrder;
-	
+	public void initialize(){
+		currOrder = Main.current.getOrder();
+	}
 	public void setData(Product item) {
 		this.item = item;
 		nameLabel.setText(item.getName());
