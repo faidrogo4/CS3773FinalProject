@@ -34,11 +34,13 @@ public class ItemController {
 	
 	public void initialize(){
 		currOrder = Main.current.getOrder();
-
+		addToCartButton.setOnAction(//*addToOrder*somehow);
+		setData(this.item);
 	}
-	
-	public void setData(Product item) {
+	public void setProduct(Product item){
 		this.item = item;
+	}
+	public void setData(Product item) {
 		nameLabel.setText(item.getName());
 		priceLabel.setText("$" + item.getPrice());
 		

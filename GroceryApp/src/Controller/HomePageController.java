@@ -7,6 +7,7 @@ import com.jfoenix.controls.JFXButton;
 import Model.LoadFxml;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -50,7 +51,11 @@ public class HomePageController implements Initializable{
 		LoadFxml object = new LoadFxml();
 
 		try {
-			Pane view = object.getPage("Item");
+			FXMLLoader itemload = new FXMLLoader();
+			ItemController cont = new ItemController();
+			itemload.setController(cont);
+			cont.setData(Main.inventory.getListByName(true).get(0));
+			Pane view = itemload.load(getClass().getResource("Item.fxml"));
 			grid.add(view, 0, 0, 1, 1);
 		} catch (Exception e) {
 			e.printStackTrace();
