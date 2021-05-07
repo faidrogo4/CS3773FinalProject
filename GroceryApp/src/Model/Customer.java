@@ -110,4 +110,18 @@ public class Customer extends Account{
     public int getOrderNum(){
         return orderNum;
     }
+
+    /**
+     * clearOrder()
+     *
+     * sets current order to null so that the next item added to
+     * cart will create a new order. Also deincrements order counter.
+     */
+    public void clearOrder(){
+        if(this.current!=null){
+            orderNum--;
+        }
+        this.current = null;
+
+    }
 }

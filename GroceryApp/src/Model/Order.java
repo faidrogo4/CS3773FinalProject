@@ -50,6 +50,13 @@ public class Order extends Inventory {
     public int getOrderNum(){
         return orderNum;
     }
+
+    /**
+     * getTotal()
+     *
+     * @return
+     * the sum of all products in the current order.
+     */
     public double getTotal(){
         double sum = 0;
         for (Product a: getListByName(true)) {
@@ -58,4 +65,6 @@ public class Order extends Inventory {
 
         return sum;
     }
+
+
 }
