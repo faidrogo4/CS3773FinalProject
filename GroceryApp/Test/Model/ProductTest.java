@@ -24,7 +24,7 @@ public class ProductTest {
 			pPrice = 3.00;
 			pQuantity = 2;
 			pDiscount = 3;
-			Product prodTest = new Product(pName, pId, pPrice, pQuantity, pDiscount);
+			Product prodTest = new Product(pName, pId, pPrice, pQuantity, pDiscount, "../../Images/banna.png");
 		} catch (Exception e) {
 			System.out.print(e);
 		}
@@ -33,7 +33,7 @@ public class ProductTest {
 	void nullName() {
 		prodTest = null;
 		try {
-			prodTest = new Product(null, pId, pPrice, pQuantity, pDiscount);
+			prodTest = new Product(null, pId, pPrice, pQuantity, pDiscount,"../../Images/banna.png");
 			
 		} catch (NullPointerException e) {
 			e.printStackTrace();
@@ -52,7 +52,7 @@ public class ProductTest {
 	void negativeId() {
 		prodTest = null;
 		try {
-			prodTest = new Product(pName, -4, pPrice, pQuantity, pDiscount);
+			prodTest = new Product(pName, -4, pPrice, pQuantity, pDiscount,"../../Images/banna.png");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -62,7 +62,7 @@ public class ProductTest {
 	void negativePrice() {
 		prodTest = null;
 		try {
-			prodTest = new Product(pName, pId, -10.04, pQuantity, pDiscount);
+			prodTest = new Product(pName, pId, -10.04, pQuantity, pDiscount,"../../Images/banna.png");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -72,7 +72,7 @@ public class ProductTest {
 	void negativeQuantity() {
 		prodTest = null;
 		try {
-			prodTest = new Product(pName, pId, pPrice,-5, pDiscount);
+			prodTest = new Product(pName, pId, pPrice,-5, pDiscount,"../../Images/banna.png");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -82,7 +82,7 @@ public class ProductTest {
 	void negativeDiscount() {
 		prodTest = null;
 		try {
-			prodTest = new Product(pName, pId, pPrice, pQuantity, -4);
+			prodTest = new Product(pName, pId, pPrice, pQuantity, -4,"../../Images/banna.png");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

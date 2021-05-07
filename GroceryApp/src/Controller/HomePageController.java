@@ -48,12 +48,12 @@ public class HomePageController implements Initializable{
 		customerFirstNameLabel.setText(Main.current.getFirstName());
 		
 		LoadFxml object = new LoadFxml();
-		
+
 		try {
 			Pane view = object.getPage("Item");
 			grid.add(view, 0, 0, 1, 1);
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 	}

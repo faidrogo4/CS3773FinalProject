@@ -40,12 +40,12 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 		
-		inventory.AddProduct(new Product("Banana", 0, 0.50, 0, 0.0));
-		inventory.AddProduct(new Product("Banana", 0, 0.50, 1, 0.0));
-		inventory.AddProduct(new Product("Broccoli", 1, 0.60, 2, 0.0));
-		inventory.AddProduct(new Product("Mango", 2, 0.70, 3, 0.0));
-		inventory.AddProduct(new Product("Orange", 3, 0.80, 4, 0.0));
-		inventory.AddProduct(new Product("Apple", 4, 0.90, 5, 0.0));
+		inventory.AddProduct(new Product("Banana", 0, 0.50, 0, 0.0,"../../Images/banana.png"));
+		inventory.AddProduct(new Product("Banana", 0, 0.50, 1, 0.0,"../../Images/kiwi.png"));
+		inventory.AddProduct(new Product("Broccoli", 1, 0.60, 2, 0.0,"../../Images/broccoli.png"));
+		inventory.AddProduct(new Product("Mango", 2, 0.70, 3, 0.0,"../../Images/mango.png"));
+		inventory.AddProduct(new Product("Orange", 3, 0.80, 4, 0.0,"../../Images/orange.png"));
+		inventory.AddProduct(new Product("Apple", 4, 0.90, 5, 0.0,"../../Images/apple.png"));
 		
 	}
 	

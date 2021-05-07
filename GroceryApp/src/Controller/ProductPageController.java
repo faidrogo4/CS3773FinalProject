@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
-public class ProductPageController implements Initializable{
+public class ProductPageController {
 
 	@FXML
 	public JFXButton HomeButton;
@@ -49,7 +49,7 @@ public class ProductPageController implements Initializable{
 	 * initialize() will load products into grid on ProductPageView load.
 	 * */
 	
-	@Override
+
     public void initialize(URL location, ResourceBundle resources) {
 		//grid.getRowConstraints().add(new RowConstraints(0));
 		//grid.getColumnConstraints().add(new ColumnConstraints(0));

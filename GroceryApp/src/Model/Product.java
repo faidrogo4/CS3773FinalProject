@@ -26,13 +26,15 @@ public class Product {
 				return ret;
 			}
 		};
-		
-		public Product(String pName, int pId, double pPrice, int pQuant, double pDiscount) {
+	private String imgSrc;
+
+	public Product(String pName, int pId, double pPrice, int pQuant, double pDiscount,String img) {
 			name = pName;
 			id = pId;
 			price = pPrice;
 			quantity = pQuant;
 			discount = pDiscount;
+			this.imgSrc = img;
 		}
 		
 		public void setName(String name) {
@@ -76,5 +78,7 @@ public class Product {
 		}
 
 
-
+    public String getPImgSrc() {
+			return this.imgSrc;
+    }
 }
