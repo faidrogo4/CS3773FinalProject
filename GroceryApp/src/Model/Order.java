@@ -50,4 +50,12 @@ public class Order extends Inventory {
     public int getOrderNum(){
         return orderNum;
     }
+    public double getTotal(){
+        double sum = 0;
+        for (Product a: getListByName(true)) {
+            sum+=a.getPrice();
+        }
+
+        return sum;
+    }
 }

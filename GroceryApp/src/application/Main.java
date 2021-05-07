@@ -21,6 +21,7 @@ public class Main extends Application {
 	public static Inventory inventory;
 	@Override
 	public void start(Stage primaryStage) {
+		inventory=new Inventory();
 		try {
 			current=null;
 			customers = new ArrayList<Customer>();

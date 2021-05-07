@@ -3,6 +3,7 @@ package Controller;
 import Model.Order;
 import Model.Product;
 import application.Main;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -26,17 +27,22 @@ public class ItemController {
 	
 	@FXML
 	public JFXButton addToCartButton;
-	
+
+
 	private Product item;
 	private Order currOrder;
+	
 	public void initialize(){
 		currOrder = Main.current.getOrder();
 	}
 	public void setData(Product item) {
-		this.item = item;
 		nameLabel.setText(item.getName());
 		priceLabel.setText("$" + item.getPrice());
-		//Image image = new Image(getClass().getResourceAsStream(item.GetPImgSrc()));
+		
+		if(item.getQuantity() == 0) {
+			addToCartButton.setVisible(false);
+		}
+		//Image image = new Image(getClass().getResourceAsStream(item.getPImgSrc()));
 		//itemImage.setImage(image);
 	}
 	
@@ -46,10 +52,10 @@ public class ItemController {
 	}
 	
 	@FXML
-	void handleAddToCartButton(ActionEvent event) throws IOException {
+	void handleAddToCartButton(ActionEvent event) {
 		addToOrder(currOrder, item);
 		System.out.println("Item clicked.");
-		System.out.println(item + "added to order");
+		System.out.println(item.getName() + "added to order");
 	}
 	
 }
