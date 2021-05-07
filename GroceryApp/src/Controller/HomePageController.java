@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXButton;
 
 import Model.LoadFxml;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -14,9 +15,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import application.Main;
 
-public class HomePageController {
+public class HomePageController implements Initializable{
 
 	@FXML
 	public JFXButton HomeButton;
@@ -39,8 +43,8 @@ public class HomePageController {
 	@FXML
 	private GridPane grid;
 
-	@FXML
-	public void initialize(){
+	@Override
+	public void initialize(URL location, ResourceBundle resources){
 		customerFirstNameLabel.setText(Main.current.getFirstName());
 		
 		LoadFxml object = new LoadFxml();
