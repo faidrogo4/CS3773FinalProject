@@ -20,7 +20,7 @@ class HistoryTest {
         }
         for(int i=0;i<3;i++){
             for(int j=1;j<4;j++) {
-                testCustomer.getOrder().AddProduct(new Product("Prod" + (j+(3*i)), 1, 1.00, 1, 0));
+                testCustomer.getOrder().addProduct(new Product("Prod" + (j+(3*i)), 1, 1.00, 1, 0));
             }
             testCustomer.checkout();
         }
@@ -41,7 +41,7 @@ class HistoryTest {
 
     @Test
     void addOrder() {
-        testCustomer.getOrder().AddProduct( new Product("newProd",1,2.00,1,0));
+        testCustomer.getOrder().addProduct( new Product("newProd",1,2.00,1,0));
         testHist.addOrder( testCustomer.getOrder());
         assertEquals("newProd",testHist.getLastOrder().getListByName(true).get(0).getName());
     }

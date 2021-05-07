@@ -18,7 +18,7 @@ public class Inventory {
 		productCount = 0;
 	}
 	
-	public void AddProduct(Product prod) {
+	public void addProduct(Product prod) {
 		p.add(prod);
 		productCount++;
 	}
@@ -27,8 +27,9 @@ public class Inventory {
 		return productCount;
 	}
 
-	public void DeleteProduct(Product prod) {
+	public void deleteProduct(Product prod) {
 		p.remove(prod.getId());
+		productCount--;
 	}
 
 	/**
@@ -65,6 +66,7 @@ public class Inventory {
 		Collections.reverse(p);
 		return p;
 	}
+
 	public ObservableList<Product> getObservable(){
 		return FXCollections.observableList(getListByName(true));
 	}
