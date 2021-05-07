@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.Product;
+import application.Main;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTreeTableView;
 
@@ -8,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
@@ -34,7 +37,16 @@ public class CheckoutPageController {
 	public JFXButton clearCartButton;
 	
 	@FXML
-	public TableView tableview;
+	public TableView<Product> tableview;
+
+	@FXML
+	public Label orderTotal;
+
+
+	public void initialize(){
+		tableview.setItems(Main.current.getOrder().getObservable());
+		orderTotal.setText("$"+Main.current.getOrder().getTotal());
+	}
 
     public void homePress(final ActionEvent actionEvent) throws IOException {
 		Parent homeParent = FXMLLoader.load(getClass().getResource("HomePageView.fxml"));
@@ -59,5 +71,15 @@ public class CheckoutPageController {
 
 	public void cartPress(final ActionEvent actionEvent) throws IOException {
 
+	}
+
+	public void checkoutPress(final ActionEvent actionEvent) throws IOException {
+		Main.current.checkout();
+		orderPress(actionEvent);
+	}
+
+	public void clearPress(final ActionEvent actionEvent) {
+		Main.current.clearOrder();
+		tableview.setItems(null);
 	}
 }

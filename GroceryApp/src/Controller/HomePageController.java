@@ -41,6 +41,7 @@ public class HomePageController {
 
 	@FXML
 	public void initialize(){
+
 		customerFirstNameLabel.setText(Main.current.getFirstName());
 		
 		grid.setGridLinesVisible(true);
@@ -129,4 +130,14 @@ public class HomePageController {
 		Stage nextStage=(Stage) CartButton.getScene().getWindow();
 		nextStage.setScene(initScene);
 	}
+
+	public void checkoutPress(ActionEvent actionEvent) throws IOException {
+		Main.current.checkout();
+		orderButton(actionEvent);
+	}
+
+	public void clearPress(ActionEvent actionEvent){
+		Main.current.clearOrder();
+	}
+
 }
