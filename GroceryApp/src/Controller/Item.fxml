@@ -50,7 +50,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="15.0" prefWidth="200.0">
                <children>
-                  <JFXButton fx:id="addToCartButton" alignment="CENTER" contentDisplay="CENTER" ripplerFill="WHITE" style="-fx-background-color: #000000;" text="Add to Cart" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton fx:id="addToCartButton" alignment="CENTER" contentDisplay="CENTER" onAction="#handleAddToCartButton" ripplerFill="WHITE" style="-fx-background-color: #000000;" text="Add to Cart" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="9.0" />
                      </font>
