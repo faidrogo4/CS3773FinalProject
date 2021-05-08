@@ -2,6 +2,9 @@ package Model;
 
 import javafx.scene.control.Label;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Customer extends Account{
 
     private Order current;
@@ -117,11 +120,12 @@ public class Customer extends Account{
      * sets current order to null so that the next item added to
      * cart will create a new order. Also deincrements order counter.
      */
-    public void clearOrder(){
+    public ArrayList<Product> clearOrder(){
         if(this.current!=null){
             orderNum--;
         }
+        ArrayList<Product> ret = (ArrayList<Product>) this.current.getListByName(true).clone();
         this.current = null;
-
+        return ret;
     }
 }

@@ -27,11 +27,11 @@ public class Product {
 			}
 		};
 		public Product(Product p){
-			this.name = p.name;
-			this.id=p.id;
-			this.price = p.price;
-			this.quantity=p.quantity;
-			this.discount=p.discount;
+			this.name = p.getName();
+			this.id=p.getId();
+			this.price = p.getPrice();
+			this.quantity=p.getQuantity();
+			this.discount=p.getDiscount();
 		}
 		public Product(String pName, int pId, double pPrice, int pQuant, double pDiscount) {
 			name = pName;
@@ -83,15 +83,20 @@ public class Product {
 
 		public int decQuantity(){
 			if(this.quantity>1){
-				return --this.quantity;
+				this.quantity--;
+			}else {
+				this.quantity = 0;
 			}
-			this.quantity=0;
 			return this.quantity;
 		}
 
 		public int incQuantity(){
 			this.quantity++;
 			return this.quantity;
+		}
+
+		public double getQPrice(){
+			return this.price*this.quantity;
 		}
 
 

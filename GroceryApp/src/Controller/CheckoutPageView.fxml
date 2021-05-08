@@ -93,7 +93,7 @@
            </cellValueFactory>
           </TableColumn>
             <TableColumn fx:id="priceColumn" prefWidth="77.0" text="Price">
-           <cellValueFactory><PropertyValueFactory property="price" />
+           <cellValueFactory><PropertyValueFactory property="qPrice" />
            </cellValueFactory>
             </TableColumn>
         </columns>

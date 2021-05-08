@@ -60,11 +60,24 @@ public class Order extends Inventory {
     public double getTotal(){
         double sum = 0;
         for (Product a: getListByName(true)) {
-            sum+=a.getPrice();
+            sum+=a.getQPrice();
         }
 
         return sum;
     }
+    public void addProduct(Product prod) {
+        boolean exist = false;
+        for (Product a:this.p) {
+            if(prod.getId()==a.getId()) {
+                a.incQuantity();
+                exist = true;
+            }
+        }
+        if(!exist){
 
+            p.add(new Product(prod.getName(),prod.getId(),prod.getPrice(),1,prod.getDiscount()));
+            super.productCount++;
+        }
+    }
 
 }

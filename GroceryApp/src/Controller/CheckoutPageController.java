@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Order;
 import Model.Product;
 import application.Main;
 import com.jfoenix.controls.JFXButton;
@@ -16,6 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class CheckoutPageController {
 	
@@ -95,7 +97,13 @@ public class CheckoutPageController {
 	}
 
 	public void clearPress(final ActionEvent actionEvent) {
-		Main.current.clearOrder();
+		ArrayList<Product> cleared = Main.current.clearOrder();
 		tableview.setItems(null);
+		cleared.forEach((a)->{
+			Main.inventory.unClear(a);
+			System.out.println(a.getName());
+		});
+		orderTotal.setText("$0.0");
+
 	}
 }

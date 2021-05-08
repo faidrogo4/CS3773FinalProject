@@ -34,7 +34,7 @@ public class AsparagusController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(1); 
+		item = Main.inventory.getListByName(true).get(1);
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}
@@ -44,12 +44,11 @@ public class AsparagusController {
 	
 	@FXML
 	void handleAddToCartButton(ActionEvent event) throws IOException {
-		int ind = Main.inventory.getListByName(true).indexOf(item);
-		if(item.getQuantity()>0){
-			this.currOrder.addProduct(new Product(item));
-			item.decQuantity();
+		if(this.item.getQuantity()>0){
+			this.currOrder.addProduct(new Product(this.item));
+			this.item.decQuantity();
 		}
-		if(item.getQuantity()<=0){
+		if(this.item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}
 	}

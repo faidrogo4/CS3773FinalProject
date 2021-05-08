@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import com.jfoenix.controls.JFXButton;
@@ -47,53 +48,48 @@ public class HomePageController {
 		grid.setGridLinesVisible(true);
 		LoadFxml object = new LoadFxml();
 		
-		try {
-			Pane view = object.getPage("Asparagus");
+
+			Product item =Main.inventory.getListByName(true).get(0);
+			Pane view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
 			grid.add(view, 0, 0, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		try {
-			Pane view1 = object.getPage("Banana");
-			grid.add(view1, 1, 0, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		try {
-			Pane view2 = object.getPage("Broccoli");
-			grid.add(view2, 0, 1, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		try {
-			Pane view3 = object.getPage("Carrot");
-			grid.add(view3, 1, 1, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		try {
-			Pane view4 = object.getPage("Kiwi");
-			grid.add(view4, 0, 2, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		try {
-			Pane view5 = object.getPage("Mango");
-			grid.add(view5, 1, 2, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		try {
-			Pane view6 = object.getPage("Orange");
-			grid.add(view6, 0, 3, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}try {
-			Pane view7 = object.getPage("Item");
-			grid.add(view7, 1, 3, 1, 1);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
+
+			item =Main.inventory.getListByName(true).get(1);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+			item =Main.inventory.getListByName(true).get(2);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+			item =Main.inventory.getListByName(true).get(3);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+			item =Main.inventory.getListByName(true).get(4);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+			item =Main.inventory.getListByName(true).get(5);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+			item =Main.inventory.getListByName(true).get(6);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+			item =Main.inventory.getListByName(true).get(7);
+			view = object.getPage(item.getName());
+			view.setVisible((item.getDiscount()>0)?true:false);
+			grid.add(view, 0, 0, 1, 1);
+
+
 	}
 
 

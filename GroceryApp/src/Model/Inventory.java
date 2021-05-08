@@ -11,18 +11,26 @@ import java.util.Observable;
 public class Inventory {
 	public ArrayList<Product> p;
 
-	private int productCount;
+	protected int productCount;
 	
 	public Inventory() {
 		p = new ArrayList<>();
 		productCount = 0;
 	}
-	
+	public void unClear(Product product){
+		for (Product a:this.p) {
+			if(a.getName().equals(product.getName())){
+				a.setQuantity(a.getQuantity()+product.getQuantity());
+			}
+		}
+	}
+
 	public void addProduct(Product prod) {
 		if(p.contains(prod)){
 			p.get(p.indexOf(prod)).incQuantity();
 		}else {
-			p.add(prod);
+
+		p.add(new Product(prod.getName(),prod.getId(),prod.getPrice(),prod.getQuantity(),prod.getDiscount()));
 			productCount++;
 		}
 	}
