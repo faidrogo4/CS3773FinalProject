@@ -3,6 +3,7 @@ package Controller;
 import Model.Product;
 import application.Main;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableView;
 
 import javafx.event.ActionEvent;
@@ -42,6 +43,12 @@ public class CheckoutPageController {
 	@FXML
 	public Label orderTotal;
 
+	@FXML
+	public JFXTextField cardField;
+
+	@FXML
+	public JFXTextField addressField;
+
 
 	public void initialize(){
 		tableview.setItems(Main.current.getOrder().getObservable());
@@ -74,6 +81,15 @@ public class CheckoutPageController {
 	}
 
 	public void checkoutPress(final ActionEvent actionEvent) throws IOException {
+		if(cardField.getText().length()<16){
+			cardField.clear();
+			cardField.setPromptText("Please enter valid Card");
+			return;
+		}
+		if(addressField.getText().isEmpty()){
+			addressField.setPromptText("Please enter address");
+			return;
+		}
 		Main.current.checkout();
 		orderPress(actionEvent);
 	}

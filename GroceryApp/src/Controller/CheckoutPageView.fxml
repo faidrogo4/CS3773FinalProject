@@ -77,8 +77,8 @@
             <Label fx:id="orderTotal" prefHeight="17.0" prefWidth="44.0" text="\$" />
          </children>
       </HBox>
-      <JFXTextField layoutX="38.0" layoutY="369.0" maxWidth="267.0" minWidth="165.0" prefHeight="33.0" prefWidth="267.0" promptText="Enter Card Number" />
-      <JFXTextField layoutX="40.0" layoutY="402.0" maxWidth="267.0" minWidth="267.0" prefHeight="33.0" prefWidth="267.0" promptText="Enter Address" />
+      <JFXTextField fx:id="cardField" layoutX="38.0" layoutY="369.0" maxWidth="267.0" minWidth="165.0" prefHeight="33.0" prefWidth="267.0" promptText="Enter Card Number" />
+      <JFXTextField fx:id="addressField" layoutX="40.0" layoutY="402.0" maxWidth="267.0" minWidth="267.0" prefHeight="33.0" prefWidth="267.0" promptText="Enter Address" />
       <TableView fx:id="tableview" layoutX="35.0" layoutY="80.0" prefHeight="240.0" prefWidth="276.0" >
          <placeholder>
             <JFXButton fx:id="placeholderButton" onAction="#browsePress" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #C0C0C0;" text="Browse products"/>
