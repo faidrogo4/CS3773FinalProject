@@ -19,8 +19,12 @@ public class Inventory {
 	}
 	
 	public void addProduct(Product prod) {
-		p.add(prod);
-		productCount++;
+		if(p.contains(prod)){
+			p.get(p.indexOf(prod)).incQuantity();
+		}else {
+			p.add(prod);
+			productCount++;
+		}
 	}
 
 	public int getProductCount(){
@@ -66,6 +70,7 @@ public class Inventory {
 		Collections.reverse(p);
 		return p;
 	}
+
 
 	public ObservableList<Product> getObservable(){
 		return FXCollections.observableList(getListByName(true));

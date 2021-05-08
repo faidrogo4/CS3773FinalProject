@@ -26,7 +26,13 @@ public class Product {
 				return ret;
 			}
 		};
-		
+		public Product(Product p){
+			this.name = p.name;
+			this.id=p.id;
+			this.price = p.price;
+			this.quantity=p.quantity;
+			this.discount=p.discount;
+		}
 		public Product(String pName, int pId, double pPrice, int pQuant, double pDiscount) {
 			name = pName;
 			id = pId;
@@ -72,6 +78,19 @@ public class Product {
 		}
 		
 		public int getQuantity() {
+			return this.quantity;
+		}
+
+		public int decQuantity(){
+			if(this.quantity>1){
+				return --this.quantity;
+			}
+			this.quantity=0;
+			return this.quantity;
+		}
+
+		public int incQuantity(){
+			this.quantity++;
 			return this.quantity;
 		}
 

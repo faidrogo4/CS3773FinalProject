@@ -3,6 +3,7 @@ package application;
 import Controller.*;
 import Model.Customer;
 import Model.Inventory;
+import Model.Product;
 import com.sun.org.apache.xpath.internal.operations.Or;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		inventory=new Inventory();
+		inventory.addProduct(new Product("Asparagus",0,1.00,1,0));
 		try {
 			current=null;
 			customers = new ArrayList<Customer>();

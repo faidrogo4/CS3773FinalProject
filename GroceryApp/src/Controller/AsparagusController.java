@@ -28,28 +28,30 @@ public class AsparagusController {
 	public JFXButton addToCartButton;
 	
 	private Product item;
+
 	private Order currOrder;
+
 	public void initialize(){
+
 		currOrder = Main.current.getOrder();
+		item = Main.inventory.getListByName(true).get(0);
+		if(item.getQuantity()<=0){
+			addToCartButton.setVisible(false);
+		}
+
 	}
-	public void setData(Product item) {
-		this.item = item;
-		nameLabel.setText(item.getName());
-		priceLabel.setText("$" + item.getPrice());
-		//Image image = new Image(getClass().getResourceAsStream(item.GetPImgSrc()));
-		//itemImage.setImage(image);
-	}
-	
-	public void addToOrder(Order currOrder, Product item) {
-		this.currOrder = currOrder;		
-		currOrder.addProduct(item);
-	}
+
 	
 	@FXML
 	void handleAddToCartButton(ActionEvent event) throws IOException {
-		addToOrder(currOrder, item);
-		System.out.println("Item clicked.");
-		System.out.println(item + "added to order");
+		int ind = Main.inventory.getListByName(true).indexOf(item);
+		if(item.getQuantity()>0){
+			this.currOrder.addProduct(new Product(item));
+			item.decQuantity();
+		}
+		if(item.getQuantity()<=0){
+			addToCartButton.setVisible(false);
+		}
 	}
 	
 }
