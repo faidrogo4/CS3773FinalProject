@@ -10,12 +10,13 @@ class CustomerTest {
     Customer testCust;
     String currentPass;
     String currentUser;
+
     @BeforeEach
     void setUp(){
         try {
             currentPass ="Test";
             currentUser = "Test";
-            Customer testCust =  new Customer(currentUser, currentPass);
+            this.testCust =  new Customer(currentUser, currentPass);
         } catch (IncorrectPasswordException e) {
             e.printStackTrace();
         }
@@ -88,5 +89,11 @@ class CustomerTest {
         assertThrows(IncorrectPasswordException.class, ()->{
             testCust.updatePass("wrong","");
         });
+    }
+    @Test
+    public void testClearOrder() {
+        testCust.clearOrder();
+        assertEquals(0,testCust.getOrderNum());
+
     }
 }

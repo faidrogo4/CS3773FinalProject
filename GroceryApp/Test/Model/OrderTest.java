@@ -72,4 +72,9 @@ class OrderTest {
     void getOrderNum() {
         assertEquals(1,cust.getOrder().getOrderNum());
     }
+
+    @Test
+    void getTotal(){
+        assertEquals(3.00,cust.getOrder().getTotal());
+    }
 }
