@@ -48,43 +48,43 @@ public class HomePageController {
 		LoadFxml object = new LoadFxml();
 		
 		try {
-			Pane view = object.getPage("Item");
+			Pane view = object.getPage("Asparagus");
 			grid.add(view, 0, 0, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view1 = object.getPage("Item");
+			Pane view1 = object.getPage("Banana");
 			grid.add(view1, 1, 0, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view2 = object.getPage("Item");
+			Pane view2 = object.getPage("Broccoli");
 			grid.add(view2, 0, 1, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view3 = object.getPage("Item");
+			Pane view3 = object.getPage("Carrot");
 			grid.add(view3, 1, 1, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view4 = object.getPage("Item");
+			Pane view4 = object.getPage("Kiwi");
 			grid.add(view4, 0, 2, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view5 = object.getPage("Item");
+			Pane view5 = object.getPage("Mango");
 			grid.add(view5, 1, 2, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view6 = object.getPage("Item");
+			Pane view6 = object.getPage("Orange");
 			grid.add(view6, 0, 3, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);

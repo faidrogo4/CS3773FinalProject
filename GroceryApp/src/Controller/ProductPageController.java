@@ -54,37 +54,37 @@ public class ProductPageController implements Initializable{
 		grid.setGridLinesVisible(true);
 		LoadFxml object = new LoadFxml();
 		try {
-			Pane view = object.getPage("Item");
+			Pane view = object.getPage("Asparagus");
 			grid.add(view, 0, 0, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view1 = object.getPage("Item");
+			Pane view1 = object.getPage("Banana");
 			grid.add(view1, 1, 0, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view2 = object.getPage("Item");
+			Pane view2 = object.getPage("Carrot");
 			grid.add(view2, 0, 1, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view3 = object.getPage("Item");
+			Pane view3 = object.getPage("Broccoli");
 			grid.add(view3, 1, 1, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view4 = object.getPage("Item");
+			Pane view4 = object.getPage("Kiwi");
 			grid.add(view4, 0, 2, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		try {
-			Pane view5 = object.getPage("Item");
+			Pane view5 = object.getPage("Mango");
 			grid.add(view5, 1, 2, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
@@ -95,7 +95,7 @@ public class ProductPageController implements Initializable{
 		} catch (Exception e) {
 			System.out.println(e);
 		}try {
-			Pane view7 = object.getPage("Item");
+			Pane view7 = object.getPage("Orange");
 			grid.add(view7, 1, 3, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);

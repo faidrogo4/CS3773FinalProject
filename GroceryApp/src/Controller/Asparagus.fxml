@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="150.0" maxWidth="125.0" prefHeight="150.0" prefWidth="125.0" styleClass="item" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AsparagusController">
+<AnchorPane maxHeight="150.0" maxWidth="125.0" prefHeight="150.0" prefWidth="125.0" styleClass="item" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AsparagusController">
    <children>
       <VBox alignment="CENTER" layoutX="1.0" layoutY="-2.0" prefHeight="150.0" prefWidth="125.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
