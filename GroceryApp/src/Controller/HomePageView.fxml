@@ -19,7 +19,7 @@
    <children>
       <HBox alignment="CENTER" layoutY="-1.0" prefHeight="59.0" prefWidth="357.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label text="Weclome, ">
+            <Label text="Welcome, ">
                <font>
                   <Font name="Helvetica" size="15.0" />
                </font>
@@ -89,7 +89,7 @@
          <children>
             <ScrollPane prefHeight="366.0" prefWidth="301.0">
                <content>
-                  <GridPane prefHeight="0.0" prefWidth="0.0">
+                  <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
