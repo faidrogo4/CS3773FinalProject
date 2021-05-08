@@ -33,7 +33,7 @@ public class MangoController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(6);
+		item = Main.inventory.getListByName(true).get(6); 
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}

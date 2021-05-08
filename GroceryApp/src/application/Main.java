@@ -30,7 +30,7 @@ public class Main extends Application {
 		inventory.addProduct(new Product("Carrot",4,1.00,1,0));
 		inventory.addProduct(new Product("Kiwi",5,1.00,1,0));
 		inventory.addProduct(new Product("Mango",6,1.00,1,0));
-		inventory.addProduct(new Product("Orange",7,1.00,1,0));
+		inventory.addProduct(new Product("Orange",7,1.00,1,0)); 
 		try {
 			current=null;
 			customers = new ArrayList<Customer>();

@@ -33,7 +33,7 @@ public class BroccoliController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(3);
+		item = Main.inventory.getListByName(true).get(3); 
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}

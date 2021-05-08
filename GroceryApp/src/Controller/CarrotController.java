@@ -33,7 +33,7 @@ public class CarrotController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(4);
+		item = Main.inventory.getListByName(true).get(4); 
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}

@@ -32,7 +32,7 @@ public class OrangeController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(7);
+		item = Main.inventory.getListByName(true).get(7); 
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}

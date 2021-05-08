@@ -35,7 +35,7 @@ public class ItemController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(0);
+		item = Main.inventory.getListByName(true).get(0); 
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}

@@ -33,7 +33,7 @@ public class BananaController {
 	public void initialize(){
 
 		currOrder = Main.current.getOrder();
-		item = Main.inventory.getListByName(true).get(2);
+		item = Main.inventory.getListByName(true).get(2); 
 		if(item.getQuantity()<=0){
 			addToCartButton.setVisible(false);
 		}
