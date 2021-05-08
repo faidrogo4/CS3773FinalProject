@@ -23,7 +23,14 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		inventory=new Inventory();
-		inventory.addProduct(new Product("Asparagus",0,1.00,1,0));
+		inventory.addProduct(new Product("Apple",0,1.00,1,0));
+		inventory.addProduct(new Product("Asparagus",1,1.00,1,0));
+		inventory.addProduct(new Product("Banana",2,1.00,1,0));
+		inventory.addProduct(new Product("Broccoli",3,1.00,1,0));
+		inventory.addProduct(new Product("Carrot",4,1.00,1,0));
+		inventory.addProduct(new Product("Kiwi",5,1.00,1,0));
+		inventory.addProduct(new Product("Mango",6,1.00,1,0));
+		inventory.addProduct(new Product("Orange",7,1.00,1,0));
 		try {
 			current=null;
 			customers = new ArrayList<Customer>();
