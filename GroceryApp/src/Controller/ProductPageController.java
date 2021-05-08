@@ -90,7 +90,7 @@ public class ProductPageController implements Initializable{
 			System.out.println(e);
 		}
 		try {
-			Pane view6 = object.getPage("Item");
+			Pane view6 = object.getPage("Apple");
 			grid.add(view6, 0, 3, 1, 1);
 		} catch (Exception e) {
 			System.out.println(e);
@@ -100,34 +100,6 @@ public class ProductPageController implements Initializable{
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-		/*Pane view = object.getPage("Item");
-		Pane view1 = object.getPage("Item");
-		Pane view2 = object.getPage("Item");
-		Pane view3 = object.getPage("Item");
-		Pane view4 = object.getPage("Item");
-		Pane view5 = object.getPage("Item");
-		Pane view6 = object.getPage("Item");
-		Pane view7 = object.getPage("Item");
-
-		
-		
-		if(view == null
-		  || view1 == null
-		  || view2 == null
-		  || view3 == null
-		  || view4 == null
-		  || view5 == null
-		  || view6 == null
-		  || view7 == null) { System.out.println("A view is null"); }
-		
-		grid.add(view, 0, 0, 1, 1);
-		grid.add(view1, 1, 0, 1, 1);
-		grid.add(view2, 0, 1, 1, 1);
-		grid.add(view3, 1, 1, 1, 1);
-		grid.add(view4, 0, 2, 1, 1);
-		grid.add(view5, 1, 2, 1, 1);
-		grid.add(view6, 0, 3, 1, 1);
-		grid.add(view7, 1, 3, 1, 1);*/
 		
     }
 

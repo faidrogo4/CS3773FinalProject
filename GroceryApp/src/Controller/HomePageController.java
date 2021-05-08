@@ -57,37 +57,37 @@ public class HomePageController {
 			item =Main.inventory.getListByName(true).get(1);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 1, 0, 1, 1);
 
 			item =Main.inventory.getListByName(true).get(2);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 0, 1, 1, 1);
 
 			item =Main.inventory.getListByName(true).get(3);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 1, 1, 1, 1);
 
 			item =Main.inventory.getListByName(true).get(4);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 0, 2, 1, 1);
 
 			item =Main.inventory.getListByName(true).get(5);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 1, 2, 1, 1);
 
 			item =Main.inventory.getListByName(true).get(6);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 0, 3, 1, 1);
 
 			item =Main.inventory.getListByName(true).get(7);
 			view = object.getPage(item.getName());
 			view.setVisible((item.getDiscount()>0)?true:false);
-			grid.add(view, 0, 0, 1, 1);
+			grid.add(view, 1, 3, 1, 1);
 
 
 	}
