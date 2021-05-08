@@ -33,6 +33,29 @@ public class ItemController {
 	private Order currOrder;
 	
 	public void initialize(){
+
+		currOrder = Main.current.getOrder();
+		item = Main.inventory.getListByName(true).get(0); 
+		if(item.getQuantity()<=0){
+			addToCartButton.setVisible(false);
+		}
+
+	}
+
+	
+	@FXML
+	void handleAddToCartButton(ActionEvent event) throws IOException {
+		int ind = Main.inventory.getListByName(true).indexOf(item);
+		if(item.getQuantity()>0){
+			this.currOrder.addProduct(new Product(item));
+			item.decQuantity();
+		}
+		if(item.getQuantity()<=0){
+			addToCartButton.setVisible(false);
+		}
+	}
+	
+	/*public void initialize(){
 		currOrder = Main.current.getOrder();
 	}
 	public void setData(Product item) {
@@ -56,6 +79,6 @@ public class ItemController {
 		addToOrder(currOrder, item);
 		System.out.println("Item clicked.");
 		System.out.println(item.getName() + "added to order");
-	}
+	}*/
 	
 }
